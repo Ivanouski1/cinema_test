@@ -3,9 +3,10 @@ pipeline {
     stages {
         stage('Bui') {
             steps {
-                echo 'Running build automation'
-                sh 'git clone https://github.com/Ivanouski1/cinema_test.git'
-                sh 'ls -la'
+                sh(script:'''
+                mysql -h 3.220.164.147 -u root -p"cinema" -P 32580
+                CREATE DATABASE cinema;
+                ''')
             }
         }
     }
