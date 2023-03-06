@@ -7,5 +7,5 @@ CREATE TABLE IF NOT EXISTS SimpleTable
     PerfomersName VARCHAR(20) NOT NULL,
     Adress VARCHAR(20) NOT NULL
 );
-INSERT SimpleTable(CustomerName, PerfomersName) 
+INSERT SimpleTable(CustomerName, PerfomersName, Adress) 
 VALUES ('Andrew', 'Dima', 'Minsk');
