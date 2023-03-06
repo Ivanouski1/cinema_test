@@ -10,6 +10,7 @@ pipeline {
         stage('MysqlQuery') {
             steps {
                sh 'OUTPUT=$(cat file1.sql)'
+               sh 'echo $OUTPUT'
                sh 'mysql -h $HOST_IP -u $MYSQL_CREDS_USR -p$MYSQL_CREDS_PSW -P $PORT -e "$OUTPUT"'
             }
         }
