@@ -9,8 +9,7 @@ pipeline {
 
         stage('MysqlQuery') {
             steps {
-               sh 'FILE=$(git log | head -n 5 | tail -1 | awk '{print $2}')'
-               sh 'OUTPUT=$(cat $FILE)'
+               sh 'OUTPUT=$(cat file1.sql)'
                sh 'mysql -h $HOST_IP -u $MYSQL_CREDS_USR -p$MYSQL_CREDS_PSW -P $PORT -e "$OUTPUT"'
             }
         }
