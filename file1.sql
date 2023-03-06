@@ -8,3 +8,6 @@ CREATE TABLE IF NOT EXISTS SimpleTable
 );
 INSERT SimpleTable(CustomerName, PerfomersName) 
 VALUES ('Andrew', 'Dima');
+
+
+
