@@ -7,21 +7,14 @@ pipeline {
 
         stage('Find file') {
             steps {
-               sh "FILE=$(git log | head -n 5 | tail -1 | awk '{print $2}')"
+               sh 'FILE=$(git log | head -n 5 | tail -1 | awk '{print $2}')'
             }
         }
-        
-        stage('Extract data') {
-            steps {
-               sh "OUTPUT=$(cat $FILE)"
-            }
-        }
-
+  
         
         stage('Update quely') {
             steps {
-                sh "mysql -h 3.220.164.147 -u $MYSQL_CREDS_USR -p$MYSQL_CREDS_PSW -P 32580" 
-                sh "\sql $OUTPUT"
+                sh 'mysql -h 3.220.164.147 -u $MYSQL_CREDS_USR -p$MYSQL_CREDS_PSW -P 32580 < $FILE'   
             }
         }
     }
