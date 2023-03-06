@@ -15,7 +15,7 @@ pipeline {
         
         stage('Update quely') {
             steps {
-                sh 'mysql -h 3.220.164.147 -u $MYSQL_CREDS_USR -p$MYSQL_CREDS_PSW -P 32580 -e "$FILE"'   
+                sh 'mysql -h 3.220.164.147 -u $MYSQL_CREDS_USR -p$MYSQL_CREDS_PSW -P 32580 -e "$OUTPUT"'   
             }
         }
     }
