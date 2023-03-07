@@ -9,7 +9,9 @@ pipeline {
 
         stage('MysqlQuery') {
             steps {
-               sh 'mysql -h $HOST_IP -u $MYSQL_CREDS_USR -p$MYSQL_CREDS_PSW -P $PORT -e "source file1.sql"'
+
+               sh './FILE.sh' 
+               sh 'mysql -h $HOST_IP -u $MYSQL_CREDS_USR -p$MYSQL_CREDS_PSW -P $PORT -e "source FILE.sql"'
             }
         }
   
