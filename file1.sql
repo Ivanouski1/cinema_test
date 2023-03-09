@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS Perfomers
     PerfomersName VARCHAR(20) NOT NULL
 );
 INSERT Perfomers(CustomerName, PerfomersName) 
-VALUES ('Andrew', 'Dim')
+VALUES ('Andrew', 'Dima')
