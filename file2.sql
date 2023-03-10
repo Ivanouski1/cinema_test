@@ -1,3 +1,3 @@
 USE testdb;
 ALTER TABLE Customers
-ADD Addres VARCHAR(50) NULL;
+ADD Address VARCHAR(50) NULL;
